@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+
+<canvas id="myCanvas" width="800" height="600" Style = "border: 2px solid black"></canvas>
+
+<script src = "FluxoTela.js"></script>
+<script src = "Intro.js"></script>
+<script src = "Menu.js"></script>
+<script src = "Animation.js"></script>
+<script src = "Instructions.js"></script>
+<script src = "Credits.js"></script>
+<script src = "Lvls.js"></script>
+<script src = "Lvls.js"></script>
+<script src = "Game.js"></script>
+<script src = "levelManager.js"></script>
+<script src = "GameOver.js"></script>
+<script src = "Win.js"></script>
+<script src = "Mouse.js"></script>
+
+<script>
+
+	var canvas = document.getElementById("myCanvas");
+	var ctx   = canvas.getContext("2d");
+	
+	var src = "intro";
+	
+	var soundClick = new Audio ();
+		soundClick.src = "Sounds/Adicionais/Clique.mp3";
+	
+	canvas.addEventListener("mousemove", mouseMove, false);
+	canvas.addEventListener("mouseup",   mouseUp,   false);
+	canvas.addEventListener("mousedown", mouseDown, false);
+	
+	function loop()
+	{	
+		Show();
+		setTimeout(loop, 30);
+	}
+	
+	loop();
+	
+</script>
+
+</html>
